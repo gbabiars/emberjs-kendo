@@ -23,9 +23,14 @@
   </header>
   <div role="main">
     <div id="datepicker-demo">
-      <label for="datepicker">Date Picker:</label>
+      <h2>Date Picker</h2>
+      <label>No Options</label>
       <script type="text/x-handlebars">
         {{view Kendo.DatePicker}}
+      </script>
+      <label>Date Format</label>
+      <script type="text/x-handlebars">
+        {{view Kendo.DatePicker format="MM-dd-yyyy"}}
       </script>
     </div>
   </div>
