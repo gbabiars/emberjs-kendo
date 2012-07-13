@@ -26,3 +26,23 @@ window.Kendo = window.Kendo || {};
 		}
 	});
 })();
+
+(function() {
+	var get = Ember.get, set = Ember.set;
+	Kendo.DropDownList = Ember.View.extend({
+		content: null,
+		valueField: null,
+		textField: null,
+		didInsertElement: function() {
+			var el = this.get('element'),
+				options = {};
+			if(this.get('content'))
+				options.dataSource = this.get('content');
+			if(this.get('valueField') && this.get('textField')) {
+				options.dataValueField = this.get('valueField');
+				options.dataTextField = this.get('textField');
+			}
+			$(el).kendoDropDownList(options);
+		}
+	});
+})();

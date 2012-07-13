@@ -41,6 +41,21 @@
         {{view Kendo.DatePicker start="century" depth="year"}}
       </script>
     </div>
+    <div id="dropdown-demo">
+      <h2>Drop Down Demo</h2>
+      <label>No Options</label>
+      <script type="text/x-handlebars">
+        {{view Kendo.DropDownList}}
+      </script>
+      <label>Baseic</label>
+      <script type="text/x-handlebars">
+        {{view Kendo.DropDownList contentBinding="App.arraySimple.content"}}
+      </script>      
+      <label>Name and Value</label>
+      <script type="text/x-handlebars">
+        {{view Kendo.DropDownList contentBinding="App.arrayDictionary.content" valueField="id" textField="name"}}
+      </script>
+    </div>
   </div>
   <footer>
 
