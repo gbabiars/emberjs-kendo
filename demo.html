@@ -28,6 +28,13 @@
     <script type="text/x-handlebars">
       {{view Kendo.DatePicker valueBinding="Demo.selectedDateController.content" format="MM-dd-yyyy"}}
     </script>
+    <script type="text/x-handlebars">
+      <p>The selected sport is {{Demo.sportsController.selected}}</p>
+    </script>
+    <script type="text/x-handlebars">
+      {{view Kendo.DropDownList contentBinding="Demo.sportsController.content" valueField="id" textField="name" 
+        valueBinding="Demo.sportsController.selected"}}
+    </script>
   </div>
   <footer>
 
