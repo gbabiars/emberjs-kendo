@@ -52,3 +52,20 @@ window.Kendo = window.Kendo || {};
 		}
 	});
 })();
+
+(function() {
+	var get = Ember.get, set = Ember.set;
+	Kendo.AutoComplete = Ember.TextField.extend({
+		content: null,
+		value: null,
+		textField: null,
+		didInsertElement: function() {
+			var options = {};
+			if(this.get('content'))
+				options.dataSource = this.get('content');
+			if(this.get('textField'))
+				options.dataTextField = this.get('textField');
+			this.$().kendoAutoComplete(options);
+		}
+	});
+})();

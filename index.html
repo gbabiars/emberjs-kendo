@@ -56,6 +56,17 @@
         {{view Kendo.DropDownList contentBinding="App.arrayDictionary.content" valueField="id" textField="name"}}
       </script>
     </div>
+    <div id="autocomplete-demo">
+      <h2>Auto Complete Demo</h2>
+      <label>Basic data</label>
+      <script type="text/x-handlebars">
+        {{view Kendo.AutoComplete contentBinding="App.arraySimple.content"}}
+      </script>      
+      <label>Data with text field specified</label>
+      <script type="text/x-handlebars">
+        {{view Kendo.AutoComplete contentBinding="App.arrayDictionary.content" textField="name"}}
+      </script>
+    </div>    
   </div>
   <footer>
 
