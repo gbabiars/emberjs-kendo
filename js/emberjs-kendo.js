@@ -42,12 +42,14 @@ window.Kendo = window.Kendo || {};
 			if(this.get('valueField') && this.get('textField')) {
 				options.dataValueField = this.get('valueField');
 				options.dataTextField = this.get('textField');
-			}
+			}	
 			if(this.get('value'))
 				options.value = this.get('value');
 			this.$().kendoDropDownList(options);
+			this.$().bind('change', $.proxy(this._updateValue, this));
+			this.$().bind('change', $.proxy(this.change, this));
 		},
-		change: function(event) {
+		_updateValue: function() {
 			this.set('value', this.$().data('kendoDropDownList').value());
 		}
 	});
