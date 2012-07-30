@@ -1,0 +1,1 @@
+window.Kendo = window.Kendo || {};
